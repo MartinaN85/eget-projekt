@@ -81,4 +81,3 @@ Utmaningar & lösningar
 För att förstå hur jag skulle skapa de olika funktionerna i JavaScript använde jag YouTube som inspirations- och lärplattform. Jag valde noggrant videor där utvecklaren förklarade både vad som gjordes och varför, vilket hjälpte mig att förstå logiken bakom varje kodval.
 
 Vid felsökning använde jag webbläsarens DevTools för att identifiera problem i min JavaScript-kod när funktioner inte fungerade som förväntat. Jag använde även DevTools för att felsöka min CSS, särskilt när element inte betedde sig som tänkt eller layouten såg annorlunda ut än planerat.
-a
