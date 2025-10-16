@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Virkverkstan</title>
+</head>
+<body>
+    <header class="header">
+        <div class="hero">
+        </div>
+        
+        <nav class="navbar">
+        <h4 class="navbar__logo">Virkverkstan</h4>
+        <div class="navbar__container">
+            <button class="navbar__toggle">
+                <span class="navbar__toggle-bar"></span>
+                <span class="navbar__toggle-bar"></span>
+                <span class="navbar__toggle-bar"></span>
+            </button>
+            
+            <ul class="navbar__menu">
+                <li><a href="../html/index.html">Blogg</a></li>
+                <li><a href="../html/shop.html">Shop</a></li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="welcome">
+            <h1 class="welcome__title">Välkommen till Virkverkstan!</h1>
+            <div class="welcome__text"> 
+                <p class="welcome__text-paragraph">Oavsett om du precis har upptäckt virkningens magi eller har virkat i åratal, är du hjärtligt välkommen hit. Virkverkstan är en plats för kreativitet, gemenskap och inspiration - där varje maska räknas och varje projekt berättar en historia. </p>
+                <p class="welcome__text-paragraph">Här hittar du tips och trix som gör virkning både enklare och roligare, idéer som väcker skaparlust, och guider som hjälper dig utvecklas - steg för steg. Vi delar med oss av smarta tekniker, trendiga mönster och små hemligheter som gör stor skillnad.</p>
+                <p class="welcome__text-paragraph">Gratis mönster hittar du i shoppen - redo att laddas ner och sätta virknålen i direkt!Så slå dig ner, fyll på med garn och låt kreativiteten flöda. Ditt nästa projekt börjar här.</p> 
+            </div>
+        </section>
+        
+        <aside class="filter__panel">
+            <div class="form__group">
+                <form class="form__sort_form" id="sort-filter">
+                    <h4 class="form__heading">Sortera:</h4>
+                    <fieldset class="form__fieldset">
+                        <label class="form__label">
+                            <input class="form__input" type="radio" name="sort" value="desc" checked>Nyaste
+                        </label>
+
+                        <label class="form__label">
+                            <input class="form__input" type="radio" name="sort" value="asc">Äldsta
+                        </label>
+                    </fieldset>
+                </form>
+
+                <form class="form__filter-form filter--fieldset" id="type-filter">
+                    <h4 class="form__heading">Filtrera:</h4>
+                    <fieldset class="form__fieldset">
+                        <label class="form__label">
+                            <input class="form__input" type="checkbox" name="type" value="amigurumi">Amigurumi
+                        </label>
+        
+                        <label class="form__label">
+                            <input class="form__input" type="checkbox" name="type" value="baby">Barn
+                        </label>
+        
+                        <label class="form__label">
+                            <input class="form__input" type="checkbox" name="type" value="autumn">Höst
+                        </label>
+        
+                        <label class="form__label">
+                            <input class="form__input" type="checkbox" name="type" value="accessories">Accessoarer
+                        </label>
+                    </fieldset>
+                    <button class="filter__button" type="button" id="filter-button">Filtrera tema</button>
+                </form>
+<!-- Dropdown för mobil -->
+
+                <div class="dropdown__wrapper">
+                    <h4 class="form__heading">Välj tema:</h4>
+                    <select class="dropdown" name="type">
+                        <option class="dropdown__text" value="amigurumi">Amigurumi</option>
+                        <option class="dropdown__text" value="baby">Barn</option>
+                        <option class="dropdown__text" value="autumn">Höst</option>
+                        <option class="dropdown__text" value="accessories">Accessoarer</option>
+                    </select>
+                </div>
+            </div>
+        </aside>
+
+<!-- inlägg-Bildspel 1 -->
+        <section class="posts">
+            <article class="article__post" data-type="amigurumi" data-sort="4">
+                <div class="carousel">
+                    <button class="carousel__button carousel__button--left">
+                        <img src="../icons/arrow-left.svg" alt="Föregående" />
+                    </button>
+
+                    <div class="carousel__track-container" id="carousel-1">
+                        <ul class="carousel__track">
+                            <li class="carousel__slide current-slide" >
+                                <img class="carousel__image" src="../images/amigurumi.png" alt="Amigurumi djur" />
+                            </li>
+                            <li class="carousel__slide">
+                                <img class="carousel__image" src="../images/whale.giraffe.png" alt="Valen och Giraffen" />
+                            </li>
+                            <li class="carousel__slide">
+                                <img class="carousel__image" src="../images/owl.bear.rabbit.png" alt="Uggla, Björn, Kanin" />
+                            </li>  
+                        </ul>
+                    </div>
+
+                    <button class="carousel__button carousel__button--right">
+                        <img src="../icons/arrow-right.svg" alt="Nästa" />
+                    </button>
+                </div>
+    
+                <div class="article__text">
+                    <h2>Amigurumi att älska</h2>
+                        <h3>- 5 favoriter att virka</h3>
+                            <p>Amigurumi är mer än bara garn och virknål - det är små personligheter som växer fram i dina händer.</p>
+                                <ul>
+                                    <li>Valen Valle: En mjuk, rund figur med broderade ögon - perfekt som present.</li>
+                                    <li>Kaninen Kerstin: Med långa gosiga öron - en favorit bland nyfödda.</li>
+                                    <li>Ugglan Utto: En klok liten vän med stora ögon och virkad fjäderstruktur.</li>
+                                    <li>Björnen Bo: Passar perfekt som nyckelring eller dekoration.</li>
+                                    <li>Giraffen Gigi: Med sina fläckar och långa hals är hon både charmig och rolig att virka.</li>
+                                </ul>
+                            <p>Tips: Använd säkerhetsögon och mjuk stoppning - och glöm inte att ge varje figur ett namn!</p>
+                </div>
+            </article>
+
+        <!-- Inlägg-Bildspel 2 -->
+            <article class="article__post" data-type="autumn" data-sort="3">
+                <div class="carousel">
+                    <button class="carousel__button carousel__button--left">
+                        <img src="../icons/arrow-left.svg" alt="Föregående" />
+                    </button>
+
+                    <div class="carousel__track-container" id="carousel-2">
+                        <ul class="carousel__track">
+                            <li class="carousel__slide current-slide">
+                                <img class="carousel__image" src="../images/autumn.png" alt="Höstaccessoarer" />
+                            </li>
+                            <li class="carousel__slide">
+                                <img class="carousel__image" src="../images/hat.mitten.png" alt="Mössa och vantar"  />                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="carousel__button carousel__button--right">
+                        <img src="../icons/arrow-right.svg" alt="Nästa" />
+                    </button>
+                </div>
+        
+
+                <div class="article__text">
+                    <h2>Virka vantar, mössor och halsdukar</h2> 
+                        <h3>- höstmys i garnform</h3>
+                            <p>När luften blir krispig är det dags att plocka fram det varma garnet. Virkade accessoarer är både praktiska och personliga - och perfekta som gåvor!</p>
+                                <ul>
+                                    <li>Ribbade vantar: Sitter bra och är enkla att anpassa.</li>
+                                    <li>Tjock mössa med tofs: Snabb att virka och supermysig.</li>
+                                </ul>
+                            <p>Välj gärna ullgarn för extra värme, eller bomull för mildare höstdagar. Och glöm inte - färgvalet gör hela skillnaden!</p>
+                </div>
+            </article>
+
+        <!-- Bildspel 3 -->
+            <article class="article__post" data-type="baby" data-sort="2">
+                <div class="carousel">
+                    <button class="carousel__button carousel__button--left">
+                        <img src="../icons/arrow-left.svg" alt="Föregående" />
+                    </button>
+
+                    <div class="carousel__track-container" id="carousel-3">
+                        <ul class="carousel__track">
+                            <li class="carousel__slide current-slide">
+                                <img class="carousel__image"src="../images/baby.png" alt="Babyskor rosa"/>
+                            </li>
+                            <li class="carousel__slide">
+                                <img class="carousel__image" src="../images/baby2.png" alt="Babyskor blå"/>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="carousel__button carousel__button--right">
+                        <img src="../icons/arrow-right.svg" alt="Nästa" />
+                    </button>
+                </div>
+                
+                <div class="article__text">
+                    <h2>Virka till baby</h2>
+                        <h3>- presentidéer som blir älskade</h3>
+                            <p>Att virka till de allra minsta är något alldeles speciellt. Det är mjukt, tryggt och fyllt med omtanke.</p> 
+                            <p>Projekt att prova:</p>
+                                <ul>
+                                    <li>Tossor med knytband: Håller små fötter varma och sitter kvar.</li>
+                                    <li>Virkad skallra: Med bjällra inuti - rolig och säker.</li>
+                                </ul>
+                            <p>Använd gärna ekologiskt bomullsgarn och undvik små delar som kan lossna.</p>
+                </div>
+            </article>
+
+            <!-- Bildspel 4 -->
+            <article class="article__post" data-type="accessories" data-sort="1">
+                <div class="carousel">
+                    <button class="carousel__button carousel__button--left">
+                        <img src="../icons/arrow-left.svg" alt="Föregående" />
+                    </button>
+
+                    <div class="carousel__track-container" id="carousel-4">
+                        <ul class="carousel__track">
+                            <li class="carousel__slide current-slide">
+                                <img class="carousel__image"src="../images/projects.png" alt="Restgarn projekt" />
+                            </li>
+                            <li class="carousel__slide">
+                                <img class="carousel__image" src="../images/project.2.png" alt="Fjäril och bokmärken"/>
+                            </li>
+                            <li class="carousel__slide">
+                                <img class="carousel__image" src="../images/project3.png" alt="Hjärta, påse, nyckelring"/>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="carousel__button carousel__button--right">
+                        <img src="../icons/arrow-right.svg" alt="Nästa" />
+                    </button>
+                </div>
+
+                <div class="article__text">
+                    <h2>Så virkar du med restgarn</h2>
+                        <h3>- kreativa projekt för små garnbitar</h3>
+                            <p>Har du en låda med garnrester som bara ligger? Dags att ge dem nytt liv!</p> 
+                            <p>Projektidéer:</p> 
+                                <ul>
+                                    <li>Nyckelringar: Virka små djur eller hjärtan - snabba och personliga.</li>
+                                    <li>Bokmärken: Platta figurer som passar mellan boksidorna.</li>
+                                    <li>Små påsar: Perfekt att förvara små saker i eller använda som presentpåse.</li>
+                                </ul>
+                            <p>Tips:</p>
+                                <ul>
+                                    <li>Sortera garnrester efter tjocklek.</li>
+                                    <li>Kombinera färger som kontrasterar för att skapa liv.</li>
+                                    <li> Spara minsta snuttar till broderidetaljer.</li> 
+                                </ul>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h4 class="contact"> Kontakt</h4>
+            <p class="phone">Telefon: 070-1234567</p>
+            <p class="email">Email: <a href="mailto:virkverkstan@virka.nu">virkverkstan@virka.nu</a></p>
+    </footer>
+
+<script src="../js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,484 @@
+:root {
+  --color-primary: #825e56;
+  --color-secondary: #f7e5d0;
+  --color-background: #C2A489;
+  --color-text: #1f2321;
+  --color-heading: #344326;
+}
+
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+
+  background-color: var(--color-background);
+  font-family: "Philosopher", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+h1, h2, h3, h4 {
+  color: var(--color-heading) ;
+  font-family: 'Aref Ruqaa', serif;
+  font-weight: 400;
+  }
+
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+.header, .main, .welcome, .footer {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.header {
+  display: grid;
+  margin: auto;
+  width: 100%;
+  grid-template-rows: 400px 1fr;
+  grid-template-areas:
+  "hero-pic"
+  "nav-menu";
+}
+
+.hero {
+  grid-area: hero-pic ;
+  background-image: url(../images/hero.png);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
+.navbar {
+  grid-area: nav-menu;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 2em;
+  height: 50px;
+  max-width: 100%;
+  position: sticky;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-heading);
+  z-index: 999;
+}
+
+.navbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 2rem;
+
+
+}
+.navbar__logo {
+  padding: 1em;
+  color: var(--color-background);
+  text-align: center;
+  }
+
+.navbar__container, .navbar__menu {
+  display: flex;
+  text-align: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navbar__container .navbar__menu li a {
+  text-decoration: none;
+  padding: 3px 20px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: all 0.7s ease;
+  white-space: nowrap;
+  color: var(--color-background);
+}
+
+.navbar__container .navbar__menu li a:hover {
+  color: var(--color-text);
+  background: var(--color-primary);
+  border: 2px solid var(--color-background);
+}
+
+.navbar__toggle {
+  display: none;
+  background: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.navbar__toggle-bar {
+display: block;
+width: 25px;
+height: 3px;
+margin: 5px auto;
+background: var(--color-background);
+transition: all 0.3sec ease-in-out;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas: 
+  "welcome welcome"
+  "filter patterns";
+  gap: 2em;
+  background-color: var(--color-secondary);
+}
+
+.welcome {
+  grid-area: welcome;
+  width: 90%;
+  background-color: var(--color-secondary);
+  text-align: center;
+}
+
+.welcome__text{
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  justify-items: center;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.welcome__text-paragraph {
+  max-width: 80ch; /* ungefär 50 tecken per rad */
+}
+
+
+
+.filter__panel {
+  grid-area: filter;
+  padding: 1rem;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+ 
+}
+
+.form {
+  width: 100%;
+  max-width: 300px;
+}
+
+.form__heading {
+  margin: 0 0 0.5em 0;
+  font-size: 1.2rem;
+  color: var(--color-heading);
+}
+
+.form__fieldset {
+  border: none;
+  padding: 0;
+}
+
+
+.form__label {
+  display: block;
+  margin-bottom: 0.5em;
+  color: var(--color-text);
+}
+
+.form__input {
+  margin-right: 0.5em;
+}
+
+.filter__button {
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: var(--color-heading);
+  color: var(--color-secondary);
+  cursor: pointer;
+  display: inline-block;
+  width: fit-content;
+  align-self: start;
+}
+
+.filter__button:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.dropdown__wrapper {
+  display: none;
+}
+
+
+.patterns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1em;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  flex: 1 1 220px; /* minsta bredd, men flexibel */
+  max-width: 220px;
+  min-width: 150px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background: #FFFFFF;
+  padding: 1rem;
+  overflow: hidden;
+  min-height: 320px; 
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.card__text {
+  margin-bottom: auto;
+}
+
+.card__category {
+ display: none;
+}
+
+.download-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-heading);
+  color: var(--color-secondary);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.download-message {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-background);
+  color: var(--color-heading);
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.download-message.show {
+  opacity: 1;
+}
+
+.footer {
+  width: 100%;
+  background-color: var(--color-heading);
+  color: var(--color-secondary);
+  justify-items: center;
+}
+
+.contact{
+  color: var(--color-secondary);
+}
+
+.email a {
+  color: var(--color-secondary); 
+  text-decoration: underline;
+}
+
+.email a:hover {
+  color: var(--color-text);
+}
+
+  @media screen and (max-width: 880px) {
+  
+  .header, .main, .footer {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "welcome"
+      "filter"
+      "posts";
+  }
+  .navbar {
+    backdrop-filter: none;
+  }
+
+  .navbar__container .navbar__menu{
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    position: absolute;
+    height: auto;
+    width: 200px;
+    top: 0;
+    right: 0;
+    padding: 2rem 1.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    background: #344326;
+ 
+  }
+
+  .navbar__container .navbar__menu.active{
+    display: flex;
+  }
+  .navbar__toggle {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    z-index: 999;
+  }
+
+  .navbar__toggle.active .navbar__toggle-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .navbar__toggle.active .navbar__toggle-bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar__toggle.active .navbar__toggle-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+   .posts {
+    padding: 0;
+  }
+ 
+  .form-group {
+    flex-direction: row;
+  }
+
+ .card {
+    width: calc(33.333% - 2rem);
+  }
+}
+
+@media screen and (max-width: 482px) {
+  
+  .hero {
+    height: auto
+  }
+  .navbar__container {
+    padding: 0 1rem;
+  }
+
+  .welcome__title {
+    font-size: 42px;
+  }
+  .filter__panel {
+    order: -1;
+    width: 100%;
+    padding: 0;
+  }
+
+  .form {
+    display: none;
+  }
+
+ .filter--fieldset {
+    display: none;
+  }
+
+ 
+  .form__group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* eller space-around */
+    align-items: flex-start;
+    gap: 0.2rem;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+
+  .dropdown__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items:center; /* 👈 centrerar innehållet horisontellt */
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .dropdown {
+    display: block;
+    width: 50%;
+    max-width: fit-content;
+    padding: 0.5em;
+    border-radius: 8px;
+    border: 1px solid var(--color-heading);
+    background-color: #fff;
+    color: var(--color-text);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown__text {
+    font-size: 8px;
+  }
+
+  .card {
+    width: calc(50% - 2rem); 
+  }
+}
+
+

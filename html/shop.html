@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/shop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Virkverksan</title>
+</head>
+<body>
+  <header class="header">
+    <div class="hero">
+    </div>
+
+    <nav class="navbar">
+      <h4 class="navbar__logo">Virkverkstan</h4>
+      <div class="navbar__container">
+        
+    <button class="navbar__toggle">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+    </button>
+    <ul class="navbar__menu">
+        <li><a href="../html/index.html">Blogg</a></li>
+        <li><a href="../html/shop.html">Shop</a></li>
+    </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="welcome">
+        <h1 class="welcome__title">Välkommen till virkverkstans mönstersamling!</h1>
+        <div class="welcome__text"> 
+          <p class="welcome__text-paragraph">Här kan du ladda ner virkmönster för alla nivåer - från nybörjare till avancerad. Filtrera efter kategori och svårighetsgrad för att hitta ditt nästa projekt.</p>
+        </div>
+    </section>
+
+    <aside class="filter__panel">
+      <div class="filter">
+        <form class="form" id="type-filter">
+          <h4 class="form__heading">Filtrera mönster:</h4>
+          <fieldset class="form__fieldset">
+            <label class="form__label"><input class="form__input" type="checkbox" name="type" value="all">Alla
+            </label>
+
+            <label class="form__label"><input class="form__input" type="checkbox" name="type" value="accessories">Accessoarer
+            </label>
+            
+            <label class="form__label"><input class="form__input" type="checkbox" name="type" value="amigurumi">Amigurumi
+            </label>
+        
+            <label class="form__label"><input class="form__input" type="checkbox" name="type" value="children">Barn
+            </label>
+        
+            <label class="form__label"><input class="form__input" type="checkbox" name="type" value="other">Övrigt
+            </label>
+          </fieldset>
+          <button class="filter__button" type="button" id="filter-button">Filtrera tema</button>
+        </form>
+<!-- Dropdown för mobil -->
+
+        <div class="dropdown__wrapper">
+          <h4 class="form__heading">Filtrera mönster:</h4>
+          <select class="dropdown" name="type">
+            <option class="dropdown__text" value="all">Alla</option>
+            <option class="dropdown__text" value="accessories">Accessoarer</option>
+            <option class="dropdown__text" value="amigurumi">Amigurumi</option>
+            <option class="dropdown__text" value="children">Barn</option>
+            <option class="dropdown__text" value="other">Övrigt</option>
+          </select>
+        </div>
+      </div>
+    </aside>
+
+    <section class="patterns">
+    </section>
+
+  </main>
+   
+  <footer class="footer">
+    <h4 class="contact"> Kontakt</h4>
+      <p class="phone">Telefon: 070-1234567</p>
+      <p class="email">Email: <a href="mailto:virkverkstan@virka.nu">virkverkstan@virka.nu</a></p>
+  </footer>
+<div id="download-message" class="download-message"></div>
+
+<script src="..//js/shop.js"></script>
+</body>
+</html>
